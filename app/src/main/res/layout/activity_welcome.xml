@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fitsSystemWindows="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawerLayout">
 
     <LinearLayout
         android:orientation="vertical"
@@ -34,23 +36,26 @@
                 android:id="@+id/btnOulgou"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.47"
                 android:text="Ουλαμαγού"
-                android:textAllCaps="false"
-                android:layout_weight="0.47" />
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btnPeninta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="50 Ερωτήσεων"
-                android:textAllCaps="false"
-
-                />
-
-
+                android:textAllCaps="false" />
         </LinearLayout>
     </LinearLayout>
 
-    
-</ScrollView>
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
 
